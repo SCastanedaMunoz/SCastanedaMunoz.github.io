@@ -18,38 +18,37 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Portfolio
+title: SCastanedaMunoz
+
+author:
+  name: Santiago Castaneda Munoz
+  avatar: "/assets/images/avatar.jpg"
+  bio: "Software Engineer with over 6 years in multiplatform game development, specializing in the mobile gaming industry"
+
 email: santiagocm98@hotmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: "A portfolio to showcase my projects, experience, and blog posts."
 baseurl: "" # the subpath of your site, e.g. /blog
 github_username: SCastanedaMunoz
 domain: scastanedamunoz.github.io 
 url: https://scastanedamunoz.github.io 
 
+data_dir: _data
+
 # Build settings
-theme: minima
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+minimal_mistakes_skin: "neon"
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
+  - jekyll-include-cache
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: single
+  - scope:
+      path: "_pages"
+    values:
+      layout: page
